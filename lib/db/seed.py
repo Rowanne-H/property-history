@@ -17,5 +17,26 @@ def create_owners():
     session.commit()
     return owners
 
+def create_agents():
+    agents = [Agent() for i in range(100)]
+    session.add_all(agents)
+    session.commit()
+    return agents
+
+def create_properties():
+    properties = [Property() for i in range(600)]
+    session.add_all(properties)
+    session.commit()
+    return properties
+
+def delete_records():
+    session.query(Owner).delete()
+    session.query(Agent).delete()
+    session.query(Property).delete()
+    session.commit()
+
 if __name__ == '__main__':
+    delete_records()
     owners = create_owners()
+    agents = create_agents()
+    properties = create_properties()
