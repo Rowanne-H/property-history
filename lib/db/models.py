@@ -13,4 +13,12 @@ class Owner(Base):
 
     def __repr__(self):
         return f'Owner(id={self.id})'
+    
+class Agent(Base):
+    __tablename__ = 'agents'
+
+    id = Column(Integer(), primary_key=True)
+
+    def __repr__(self):
+        return f'Agent(id={self.id})'
 
