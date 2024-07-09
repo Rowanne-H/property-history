@@ -35,8 +35,18 @@ def delete_records():
     session.query(Property).delete()
     session.commit()
 
+def relate_one_to_many(owners, agents, properties):
+    for property in properties:
+        property.owner = rc(owners)
+        property.agent = rc(agents)
+
+    session.add_all(properties)
+    session.commit()
+    return owners, agents, properties
+
 if __name__ == '__main__':
     delete_records()
     owners = create_owners()
     agents = create_agents()
     properties = create_properties()
+    owners, agents, properties = relate_one_to_many(owners, agents, properties)
