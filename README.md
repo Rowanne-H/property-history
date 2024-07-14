@@ -42,16 +42,16 @@ out to ask for an integer input between 1 and 500.
 When an input is between 1 and 500 
 which is a valid property id, a message will show this property's owner_id and agent_id.
 
-
 When input equals null, CLI is terminated.
-
 
 ***
 
 ## property_history database
 
+This database is set up when running Alembic migrations. All files are connected to this database which is stored in lib/db/property.db. In this database, there are three tables which are owners, properties and agents.
 
+***
 
+## models
 
-## Introduction
 
