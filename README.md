@@ -54,4 +54,10 @@ This database is set up when running Alembic migrations. All files are connected
 
 ## models
 
+There are three models in models.py which are Onwer Model, Property Model and Agent Model. Each model generates a table with their name in plural and they are related to each other. Each property belongs to an owner while owner can have several properties. An agent can manage several properties while property can only be managed by an agent. Owners and agents are related to each other via properties. To make these models simple, only id information is stored in this database.
+
+
+
+
+
 
