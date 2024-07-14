@@ -52,9 +52,15 @@ This database is set up when running Alembic migrations. All files are connected
 
 ***
 
-## models
+## models.py
 
 There are three models in models.py which are Onwer Model, Property Model and Agent Model. Each model generates a table with their name in plural and they are related to each other. Each property belongs to an owner while owner can have several properties. An agent can manage several properties while property can only be managed by an agent. Owners and agents are related to each other via properties. To make these models simple, only id information is stored in this database.
+
+***
+
+## seed.py
+
+Functions in seed.py is to seed database. For loop is used to generate 500 owners, 600 properties and 100 agents and random.choice() is used to assign owners and agents to properties. 
 
 
 
