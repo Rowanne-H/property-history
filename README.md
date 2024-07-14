@@ -60,7 +60,15 @@ There are three models in models.py which are Onwer Model, Property Model and Ag
 
 ## seed.py
 
-Functions in seed.py is to seed database. For loop is used to generate 500 owners, 600 properties and 100 agents and random.choice() is used to assign owners and agents to properties. 
+Functions in seed.py is to seed database. For loop is used to generate 500 owners, 600 properties and 100 agents and random.choice() is used to assign owners and agents to properties.
+
+***
+
+#### References
+1. Academic learning materials and 
+2. Google
+3. StackOverflow
+4. W3Schools
 
 
 
